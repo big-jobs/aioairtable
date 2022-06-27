@@ -133,7 +133,7 @@ def backoff_wait_gen() -> Generator[float, None, None]:
     expo_gen = backoff.expo()
     yield expo_gen.send(None)
     for value in expo_gen:
-        yield AT_WAIT + value
+        yield AT_WAIT + (value if value else 0)
 
 
 def backoff_giveup(exception: Exception) -> bool:
