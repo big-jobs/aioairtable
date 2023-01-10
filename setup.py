@@ -45,7 +45,7 @@ setup(
         "multidict",
         "yarl",
         "backoff>=2",
-        "aiofreqlimit>=0.0.7",
+        # "aiofreqlimit>=0.0.7",
     ],
     tests_require=[
         "pytest",
